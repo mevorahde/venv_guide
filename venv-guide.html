@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Virtual Environment Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #005f99;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .platform {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Python Virtual Environment: Activation & Deactivation</h1>
+  <p>This guide provides quick commands to activate and deactivate Python virtual environments across different platforms.</p>
+
+  <div class="platform">
+    <h2>🖥️ Windows (CMD)</h2>
+    <pre>
+python -m venv venv
+venv\Scripts\activate
+# To deactivate:
+deactivate
+    </pre>
+  </div>
+
+  <div class="platform">
+    <h2>🖥️ Windows (PowerShell)</h2>
+    <pre>
+python -m venv venv
+venv\Scripts\Activate.ps1
+# To deactivate:
+deactivate
+    </pre>
+  </div>
+
+  <div class="platform">
+    <h2>🐧 Linux / macOS</h2>
+    <pre>
+python3 -m venv venv
+source venv/bin/activate
+# To deactivate:
+deactivate
+    </pre>
+  </div>
+
+  <p>✅ Tip: Always activate your venv before installing packages to keep dependencies isolated.</p>
+  <p>📦 To install packages: <code>pip install &lt;package-name&gt;</code></p>
+</body>
+</html>
