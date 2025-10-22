@@ -69,7 +69,26 @@ deactivate
     </pre>
   </div>
 
+  <section id="delete-venv">
+  <h2>🗑️ Deleting a Virtual Environment</h2>
+  <p>Removing a virtual environment is straightforward—just delete its directory. Here's how to do it on each OS:</p>
+
+  <h3>Windows</h3>
+  <pre><code>Remove-Item -Recurse -Force .env</code></pre>
+  <p>Or manually delete the folder using File Explorer.</p>
+
+  <h3>macOS / Linux</h3>
+  <pre><code>rm -rf venv</code></pre>
+  <p>Make sure you're in the parent directory of the virtual environment before running this command.</p>
+
+  <blockquote>
+    <strong>⚠️ Note:</strong> This action is irreversible. Ensure you no longer need the environment before deleting it.
+  </blockquote>
+</section>
+
+
   <p>✅ Tip: Always activate your venv before installing packages to keep dependencies isolated.</p>
   <p>📦 To install packages: <code>pip install &lt;package-name&gt;</code></p>
 </body>
+
 </html>
