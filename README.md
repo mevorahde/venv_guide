@@ -29,3 +29,7 @@ To use this page:
 ---
 
 Made for quick reference and clean hosting.
+
+## License
+
+The original code and documentation in this repository are available under the [MIT License](LICENSE).
