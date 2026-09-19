@@ -43,8 +43,8 @@
     <h2>🖥️ Windows (CMD)</h2>
     <pre>
 python -m venv venv
-venv\Scripts\activate
-# To deactivate:
+venv\Scripts\activate.bat
+REM To deactivate:
 deactivate
     </pre>
   </div>
@@ -53,7 +53,7 @@ deactivate
     <h2>🖥️ Windows (PowerShell)</h2>
     <pre>
 python -m venv venv
-venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 # To deactivate:
 deactivate
     </pre>
@@ -73,8 +73,12 @@ deactivate
   <h2>🗑️ Deleting a Virtual Environment</h2>
   <p>Removing a virtual environment is straightforward—just delete its directory. Here's how to do it on each OS:</p>
 
-  <h3>Windows</h3>
-  <pre><code>Remove-Item -Recurse -Force .env</code></pre>
+  <p>Deactivate first, close programs using the environment, and confirm that <code>venv</code> contains only the disposable environment, not your project files.</p>
+  <h3>Windows (PowerShell)</h3>
+  <p>From the environment's parent directory, confirm the resolved path and preview deletion. Only then run the final command:</p>
+  <pre><code>Resolve-Path -LiteralPath .\venv
+Remove-Item -LiteralPath .\venv -Recurse -WhatIf
+Remove-Item -LiteralPath .\venv -Recurse</code></pre>
   <p>Or manually delete the folder using File Explorer.</p>
 
   <h3>macOS / Linux</h3>
@@ -87,8 +91,9 @@ deactivate
 </section>
 
 
-  <p>✅ Tip: Always activate your venv before installing packages to keep dependencies isolated.</p>
-  <p>📦 To install packages: <code>pip install &lt;package-name&gt;</code></p>
+  <p>✅ Tip: Activation makes the environment's Python available by name, but is optional. If PowerShell blocks activation, use the environment's interpreter directly instead of changing security policy.</p>
+  <p>📦 After activation, install packages with <code>python -m pip install &lt;package-name&gt;</code>. Without activation, use <code>.\venv\Scripts\python.exe -m pip install &lt;package-name&gt;</code> on Windows or <code>./venv/bin/python -m pip install &lt;package-name&gt;</code> on macOS/Linux.</p>
+  <p>Reference: <a href="https://docs.python.org/3/library/venv.html">Python's official venv documentation</a>.</p>
 </body>
 
 </html>

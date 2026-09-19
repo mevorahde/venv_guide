@@ -4,7 +4,7 @@ This repository contains a simple HTML reference page for activating and deactiv
 
 ## 🔗 Live Preview
 
-You can view the guide directly via GitHub Pages (if enabled) or by opening `venv-guide.html` in your browser.
+Open the [live Python Virtual Environment Guide](https://mevorahde.github.io/venv_guide/) or open `index.html` in your browser.
 
 ## 📘 What's Inside
 
@@ -18,12 +18,12 @@ You can view the guide directly via GitHub Pages (if enabled) or by opening `ven
 
 To use this page:
 1. Clone or fork the repo.
-2. Open `venv-guide.html` locally or host via GitHub Pages.
+2. Open `index.html` locally or use the live guide above.
 3. Refer to it whenever you need a quick venv refresher.
 
 ## 📂 File List
 
-- `venv-guide.html` — Main reference page
+- `index.html` — Main reference page
 - `README.md` — This file
 
 ---
